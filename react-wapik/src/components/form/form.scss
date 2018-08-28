@@ -1,0 +1,47 @@
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+.contact-form {
+
+  &-field {
+
+    textarea {
+      margin-bottom: 23px;
+    }
+
+    input {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__input {
+    display: block;
+    outline: none;
+    width: 100%;
+    border:1px solid $colorTheme1;
+    color: $colorTheme2;
+    font:normal 14px/1 $basis-font-family;
+    padding: 15px 11px 11px;
+    box-shadow: 0px 0 6px 1px #e8e8e8;
+
+    &[name="Message"] {
+      min-height: 122px;
+    }
+  }
+
+  &__btn {
+    font:normal 13px/1 $castomFont2;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: $colorTheme4;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 43px;
+    transition: ease-in-out background-color .3s, ease-in-out box-shadow .3s;
+
+    &:hover {
+      background-color: darken($colorTheme4, 4%);
+      box-shadow: 0 0 10px 3px lighten($colorTheme4, 15%);
+    }
+  }
+}

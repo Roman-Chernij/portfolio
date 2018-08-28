@@ -1,0 +1,30 @@
+.built {
+  background-color: #eef1ec;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 100% center;
+  padding: 160px 0 175px; }
+  .built-holder {
+    width: 50%; }
+  .built__title {
+    font: 300 32px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+    color: #0f5f5c; }
+  .built__description {
+    font: 300 14px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+    color: #83a7a5; }
+  @media (max-width: 1023px) {
+    .built {
+      padding: 100px 0;
+      background-position: center center; }
+      .built-holder {
+        width: 100%; }
+      .built__title {
+        color: #083331;
+        text-align: center; }
+      .built__description {
+        font-size: 16px;
+        font-weight: 600;
+        color: #537674; } }
+  @media (max-width: 767px) {
+    .built {
+      padding: 40px 0; } }

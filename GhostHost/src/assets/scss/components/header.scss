@@ -1,0 +1,24 @@
+.header {
+
+  padding-top: 23px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index:3;
+
+  .grid-container {
+    border-bottom: 1px solid #292929;
+    background-color: rgba(#06070a, 0.4);
+  }
+
+  .button {
+    background-color: transparent;
+    font-size: 1.8rem;
+    padding: 0.45em 0.5em;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

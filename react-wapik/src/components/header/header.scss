@@ -1,0 +1,115 @@
+@import "../../variables.scss";
+@import "../../basis/_mixins.scss";
+
+.header {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:3;
+
+  &-home {
+
+    .logo__link {
+      color: red;
+    }
+  }
+
+  &-home,
+  &-about {
+
+      .nav-list__link {
+          color: lighten($colorTheme1, 10%);
+
+          &:hover,
+          &:active {
+            color: #fff;
+          }
+      }
+
+      .header-phone__link {
+          color: #fff;
+      }
+
+
+
+      .logo {
+
+        &::before {
+          background-color: rgba(#fff, 20%);
+
+        }
+    }
+  }
+
+  &-about {
+
+    .logo__link {
+      color: #fff;
+    }
+  }
+
+  &-row {
+    padding: 23px 0;
+    display: flex;
+    border-bottom:1px solid rgba(#fff, 20%);
+  }
+
+  &-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    flex: 1 0 auto;
+  }
+
+  &-mobi-icon {
+    display: none;
+
+    &__item {
+      border: none;
+      background-color: transparent;
+      color: $colorTheme2;
+      font-size: 30px;
+
+      &:hover,
+      &:focus {
+        outline: none;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include breakpoint ($mobile) {
+
+    &-mobi-icon {
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+  }
+}
+
+.started {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    border-radius: 5PX;
+    padding: 12px;
+    font: 12px/1.3 $castomFont2;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: $colorTheme4;
+  }
+
+  @include breakpoint ($mobile) {
+
+    display: none;
+  }
+}

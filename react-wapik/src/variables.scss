@@ -1,0 +1,41 @@
+$mobileM: 480;
+$mobile:  767;
+$tabletM: 992;
+$tablet:  1023;
+$laptop:  1200;
+
+$widthvalue:'max-width';
+
+$mobileMPoint: (#{$widthvalue} : #{$mobileM}px);
+$mobilePoint:  (#{$widthvalue} : #{$mobile}px);
+$tabletMPoint: (#{$widthvalue} : #{$tabletM}px);
+$tabletPoint:  (#{$widthvalue} : #{$tablet}px);
+$laptopPoint:  (#{$widthvalue} : #{$laptop}px);
+
+
+$urlFont:'../fonts';
+$urlImage:'../images/';
+
+
+
+
+
+$basis-font-size:16;
+$basis-color: #000;
+$basis-line-height: 1.375;
+$basis-min-width-window: 320;
+$basis-font-family:  'Roboto', 'Open Sans', 'Raleway', sans-serif;
+
+$castomFont1:'Shrikhand', cursive;
+$castomFont2:'Montserrat', sans-serif;
+$castomFont3:'Merriweather', serif;
+
+
+$transitionTime: .3;
+
+$colorTheme1:#c1d3d2;
+$colorTheme2:#83a7a5;
+$colorTheme3:#0f5f5c;
+$colorTheme4:#6fb048;
+$colorTheme5:#eef1ec;
+$colorTheme6:#6c807f;

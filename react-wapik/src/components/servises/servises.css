@@ -1,0 +1,42 @@
+.servises {
+  padding: 55px 0 65px; }
+  .servises-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -37px; }
+  .servises__item {
+    width: 50%;
+    padding: 0 37px 47px; }
+  .servises-holder__title {
+    font: 16px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+    color: #0f5f5c;
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 20px; }
+    .servises-holder__title::before {
+      position: absolute;
+      top: 50%;
+      left: -5px;
+      transform: translateY(-50%);
+      color: #6fb048;
+      font-size: 35px; }
+  .servises-holder__description {
+    font: 14px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+    color: #83a7a5; }
+  @media (max-width: 1200px) {
+    .servises-inner {
+      margin: 0 -15px; }
+    .servises__item {
+      width: 50%;
+      padding: 0 15px 30px; } }
+  @media (max-width: 480px) {
+    .servises-holder__title {
+      padding: 55px 0 0;
+      text-align: center; }
+      .servises-holder__title::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0; }
+    .servises-holder__description {
+      text-align: center; } }

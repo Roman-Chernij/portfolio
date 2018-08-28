@@ -1,0 +1,75 @@
+@import "../../variables.scss";
+@import "../../basis/_mixins.scss";
+
+.servises {
+    padding: 55px 0 65px;
+
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -37px;
+    }
+
+    &__item {
+        width: 50%;
+        padding: 0 37px 47px;
+    }
+
+    &-holder {
+
+        &__title {
+            font: 16px/1.5 $basis-font-family;
+            color: $colorTheme3;
+            position: relative;
+            padding-left: 55px;
+            margin-bottom: 20px;
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: -5px;
+                transform: translateY(-50%);
+                color: $colorTheme4;
+                font-size: 35px;
+            }
+        }
+
+        &__description {
+            font: 14px/1.5 $basis-font-family;
+            color: $colorTheme2;
+        }
+    }
+
+     @include breakpoint ($laptop) {
+       &-inner {
+           margin: 0 -15px;
+       }
+
+       &__item {
+           width: 50%;
+           padding: 0 15px 30px;
+       }
+     }
+
+    @include breakpoint ($mobileM) {
+
+        &-holder {
+
+            &__title {
+                padding: 55px 0 0;
+                text-align: center;
+
+                &::before {
+                    top: 0;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    margin: 0;
+                }
+            }
+
+            &__description {
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+.contact-form-field textarea {
+  margin-bottom: 23px; }
+
+.contact-form-field input {
+  margin-bottom: 28px; }
+
+.contact-form__input {
+  display: block;
+  outline: none;
+  width: 100%;
+  border: 1px solid #c1d3d2;
+  color: #83a7a5;
+  font: normal 14px/1 "Roboto", "Open Sans", "Raleway", sans-serif;
+  padding: 15px 11px 11px;
+  box-shadow: 0px 0 6px 1px #e8e8e8; }
+  .contact-form__input[name="Message"] {
+    min-height: 122px; }
+
+.contact-form__btn {
+  font: normal 13px/1 "Montserrat", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #6fb048;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 43px;
+  transition: ease-in-out background-color .3s, ease-in-out box-shadow .3s; }
+  .contact-form__btn:hover {
+    background-color: #66a242;
+    box-shadow: 0 0 10px 3px #99c97b; }

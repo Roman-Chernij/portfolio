@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter");
+.error {
+  position: relative;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .error__title {
+    text-align: center;
+    text-transform: uppercase;
+    font: 90px/1.5 'Archivo Black', sans-serif;
+    color: #0f5f5c; }
+  .error__description {
+    font: 40px/1.5 'Architects Daughter', cursive;
+    color: #6fb048;
+    display: block;
+    text-align: center; }

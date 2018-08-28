@@ -1,0 +1,50 @@
+@import "../../variables.scss";
+@import "../../basis/_mixins.scss";
+
+.built {
+  background-color: $colorTheme5;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 100% center;
+  padding: 160px 0 175px;
+
+  &-holder {
+    width: 50%;
+  }
+
+  &__title {
+    font:300 32px/1.5 $basis-font-family;
+    color: $colorTheme3;
+  }
+
+  &__description {
+    font:300 14px/1.5 $basis-font-family;
+    color: $colorTheme2;
+  }
+
+  @include breakpoint($tablet) {
+
+    padding: 100px 0;
+    background-position: center center;
+
+    &-holder {
+      width: 100%;
+    }
+
+    &__title {
+      color: darken($colorTheme3, 10%);
+      text-align: center;
+    }
+
+    &__description {
+      font-size: 16px;
+      font-weight: 600;
+      color: darken($colorTheme2, 19%);
+    }
+  }
+
+  @include breakpoint($mobile) {
+
+    padding: 40px 0;
+  }
+}

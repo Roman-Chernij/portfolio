@@ -1,0 +1,93 @@
+.pricing {
+  padding-top: 85px; }
+  .pricing-inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 0; }
+    .pricing-inner p {
+      color: #83a7a5;
+      font-size: 14px; }
+      .pricing-inner p:not(:last-child) {
+        margin-bottom: 15px; }
+  .pricing-wrap {
+    max-width: 763px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px; }
+  .pricing-holder {
+    width: 33.33%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+    border: 1px solid #c1d3d2;
+    transition: ease-in-out boder .3s; }
+    .pricing-holder:not(first-child) {
+      margin-left: -1px; }
+    .pricing-holder:hover {
+      position: relative;
+      z-index: 2;
+      border: 1px solid #6fb048; }
+    .pricing-holder__type {
+      color: #6fb048;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 25px; }
+    .pricing-holder__price {
+      color: #0f5f5c;
+      font-family: "Montserrat", sans-serif;
+      font-size: 65px;
+      font-weight: 900;
+      line-height: 1; }
+    .pricing-holder__month {
+      color: #0f5f5c;
+      font-size: 14px;
+      display: block;
+      text-align: center;
+      margin-bottom: 30px; }
+    .pricing-holder-list {
+      margin-bottom: 27px; }
+      .pricing-holder-list__item {
+        color: #83a7a5;
+        text-align: center;
+        font-size: 16px; }
+        .pricing-holder-list__item:not(:last-child) {
+          margin-bottom: 20px; }
+    .pricing-holder__btn {
+      padding: 12px 27px;
+      border-radius: 5px;
+      border: none;
+      color: #fff;
+      text-transform: uppercase;
+      font: bold 13px/1.4 "Montserrat", sans-serif;
+      background-color: #83a7a5;
+      transition: ease-in-out background-color .3s; }
+      .pricing-holder__btn:hover {
+        background-color: #6fb048; }
+  @media (min-width: 320px) and (max-width: 992px) {
+    .pricing-holder__price {
+      font-size: calc(0.0446 * 100vw + 20.714px); } }
+  @media (max-width: 767px) {
+    .pricing-inner {
+      padding: 25px 0 0; }
+    .pricing-holder {
+      width: 50%; }
+      .pricing-holder__month {
+        font-size: 11px; }
+      .pricing-holder-list {
+        margin-bottom: 27px; }
+        .pricing-holder-list__item {
+          font-size: 14px; }
+          .pricing-holder-list__item:not(:last-child) {
+            margin-bottom: 15px; }
+      .pricing-holder__btn {
+        padding: 12px 15px;
+        font-size: 11px; } }
+  @media (max-width: 480px) {
+    .pricing-holder {
+      width: 100%; } }

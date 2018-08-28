@@ -1,0 +1,95 @@
+.reviews {
+  padding: 44px 0 50px;
+
+  &-slider {
+    margin-bottom: 12px;
+
+    &__item {
+      font:300 20px/1 'Lato', sans-serif;
+      color: $primary-color;
+      padding: 0 144px;
+
+      &:focus {
+        outline: none;
+      }
+
+      * {
+        margin: 0;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__author {
+      font:700 20px/1 'Lato', sans-serif;
+      color: $primary-color;
+      text-transform: capitalize;
+      min-width: 97px;
+      padding-right: 10px;
+      border-right: 1px solid lighten(#000, 59%);
+    }
+
+    &__slider-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+
+      .slick-dots {
+        display: flex;
+        margin: 0;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:not(:last-child) {
+            margin-right: 12px;
+          }
+        }
+
+        .slick-active {
+
+          button {
+            background-color: $primary-color;
+          }
+        }
+
+        button {
+          text-indent: -999999px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          border: 1px solid $primary-color;
+          transition: ease-in-out background-color .3s;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large down) {
+    &-slider {
+      margin-bottom: 12px;
+
+      &__item {
+        padding: 0 70px;
+      }
+    }
+  }
+
+  @include breakpoint(small down) {
+    &-slider {
+      margin-bottom: 12px;
+
+      &__item {
+        padding: 0;
+      }
+    }
+  }
+
+}

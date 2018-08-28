@@ -1,0 +1,66 @@
+@import "../../variables.scss";
+@import "../../basis/_mixins.scss";
+
+.team {
+  background-color: $colorTheme5;
+  padding: 69px 0 116px;
+
+  &-wrap {
+    padding-top: 93px;
+    display: flex;
+    margin: 0 -15px;
+
+    &__item {
+      padding: 0 15px;
+      width: 33.33%;
+    }
+  }
+
+  &-holder {
+
+    &__image {
+      margin-bottom: 10px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      font:normal 15px/1.5 $basis-font-family;
+      color: $colorTheme3;
+    }
+
+    &__post {
+      font:normal 14px/1.5 $basis-font-family;
+      color: $colorTheme2;
+    }
+  }
+
+  @include breakpoint ($mobile) {
+
+    padding: 30px 0;
+
+    &-wrap {
+      padding-top: 40px;
+      flex-wrap: wrap;
+
+      &__item {
+        padding: 0 15px 30px;
+        width: 50%;
+      }
+    }
+  }
+
+  @include breakpoint ($mobileM) {
+
+    &-wrap {
+      margin: 0;
+
+      &__item {
+        padding: 0 0 15px;
+        width: 100%;
+      }
+    }
+  }
+}

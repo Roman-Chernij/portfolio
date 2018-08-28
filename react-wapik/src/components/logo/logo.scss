@@ -1,0 +1,28 @@
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+.logo {
+  padding-right: 23px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 1px;
+    background-color: $colorTheme2;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+  &__link {
+    font:28px/1.4 $castomFont1;
+    text-transform: uppercase;
+    color: $colorTheme3;
+  }
+
+  @include breakpoint ($mobileM) {
+    padding-right: 10px;
+  }
+}

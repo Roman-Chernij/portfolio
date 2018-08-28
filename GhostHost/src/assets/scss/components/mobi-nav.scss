@@ -1,0 +1,23 @@
+.mobi-nav {
+    padding-top: 23px;
+  .nav-list {
+    flex-direction: column;
+
+    .nav-list__item {
+      justify-content: flex-start;
+      padding: 1rem;
+
+      a {
+        padding: 0;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

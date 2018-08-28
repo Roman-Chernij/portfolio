@@ -1,0 +1,265 @@
+//$warning-color
+$arr: (
+  basic: (
+    color:$warning-color,
+    round: '960 112'
+  )
+);
+
+@mixin packege($color, $round) {
+  &::before {
+    background-color: $color;
+  }
+
+  svg {
+    circle {
+      stroke: $color;
+      stroke-dasharray: #{$round} ;
+    }
+  }
+
+  .packege-holder-head__icon {
+    color: $color;
+  }
+
+  .packege-holder-body__value {
+    color: $color;
+  }
+
+  .packege-holder-footer__price {
+
+    &::before {
+      background-color: $color;
+    }
+  }
+
+  .packege-holder-footer__link {
+
+    &:hover {
+      color: $color;
+    }
+  }
+}
+
+.packege {
+  position: relative;
+  padding: 103px 0 0;
+
+
+  &-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 384px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-wrap {
+    margin: 0 -35px;
+    padding: 0 0 130px;
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 1px;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+      right: 25px;
+      background-image: url(../img/decor-line.png);
+      background-repeat: repeat;
+      background-size: cover;
+    }
+
+    &__item {
+      padding: 0 27px;
+    }
+  }
+  &-holder {
+    padding: 0 25px;
+    position: relative;
+    background-color: $primary-color;
+    //box-shadow: 0px 1px 4px 1px #f8f8f8;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0px 1px 4px 1px darken(#f8f8f8, 4%);
+    }
+
+    &::before {
+
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+    }
+
+    svg {
+      overflow: inherit;
+    }
+
+    &_basic {
+      @include packege($warning-color, '960 112')
+    }
+
+    &_normal {
+      @include packege(darken($primary-color, 53%), '993 84')
+    }
+
+    &_big {
+      @include packege($alert-color, '1027 44')
+    }
+
+    &_biggest {
+      @include packege( #1abc9c, '993 0')
+    }
+
+    &-head {
+      border-bottom: 1px solid $medium-gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 41px;
+
+      &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        position: relative;
+        margin-bottom: 13px;
+        font-size: 18px;
+
+        svg {
+          circle {
+            fill: none;
+            stroke-width: 6;
+            stroke-dashoffset: 960;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          margin: 0;
+          padding: 0;
+          width: inherit;
+        }
+      }
+
+      &__title {
+        font:bold 16px/1.4 'Lato', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+
+    &-body {
+
+      &-list {
+        list-style-type: none;
+        margin: 0;
+        padding-top: 14px;
+        border-bottom: 1px solid $medium-gray;
+
+        &__item {
+          display: flex;
+          margin-bottom: 14px;
+        }
+      }
+
+      &__name {
+        font: 400 16px/1.5 'Lato', sans-serif;
+        color: #b4b4b4;
+        flex: 1 0 auto;
+      }
+
+      &__value {
+        font: 600 16px/1.5 'Lato', sans-serif;
+      }
+    }
+
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 0;
+
+      &__price {
+        font:700 27px/1.4 'Lato', sans-serif;
+        display: block;
+        padding: 0 20px 5px;
+        position: relative;
+        margin-bottom: 14px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 3px;
+        }
+
+        sup {
+          font-size: 16px;
+          font-weight: 900;
+        }
+
+        sub {
+          font-size: 13px;
+          font-weight: 500;
+          color: #8d8d8d;
+        }
+      }
+
+      &__link {
+        font:700 16px/1.4 'Lato', sans-serif;
+        text-transform: uppercase;
+        color: #000;
+        transition: ease-in-out color .3s;
+      }
+    }
+  }
+
+    @include breakpoint(xxlarge down) {
+
+    &-wrap {
+      margin: 0 -15px;
+
+      &__item {
+        padding: 0 15px 30px;
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+
+    &-wrap {
+     margin: 0 -15px;
+
+      &__item {
+        padding: 0 15px 30px;
+      }
+    }
+  }
+}

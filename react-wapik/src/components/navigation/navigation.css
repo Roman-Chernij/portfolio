@@ -1,0 +1,101 @@
+.nav {
+  display: flex;
+  transition: ease-in-out height .4s; }
+  .nav-list_header {
+    display: flex;
+    align-items: center; }
+  .nav-list__link {
+    font: 14px/1.5 "Montserrat", sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0 15px 10PX;
+    color: #83a7a5;
+    transition: ease-in-out color 0.3s; }
+    .nav-list__link::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 1px;
+      position: absolute;
+      background-color: #c1d3d2;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: ease-in-out width 0.3s; }
+    .nav-list__link:hover::before {
+      width: 60%; }
+    .nav-list__link:hover, .nav-list__link:active {
+      color: #0f5f5c; }
+    .nav-list__link:hover, .nav-list__link:focus, .nav-list__link:active {
+      outline: none;
+      text-decoration: none; }
+    .nav-list__link_active {
+      font-weight: 900; }
+      .nav-list__link_active::before {
+        width: 60%; }
+  @media (max-width: 992px) {
+    .nav-list__link {
+      font-size: 12PX;
+      padding: 0 10PX 10px; } }
+  @media (max-width: 767px) {
+    .nav {
+      position: absolute;
+      top: -100vh;
+      left: 0;
+      right: 0;
+      background-color: #0f5f5c;
+      z-index: 1;
+      min-height: 100vh; }
+      .nav-list__item:not(:last-child) {
+        margin-bottom: 15px; }
+      .nav.nav-mobi_is-opened {
+        animation: zoomIn 0.5s ease-in-out 1;
+        animation-fill-mode: forwards; }
+      .nav.nav-mobi_close {
+        animation: zoomOut 0.9s ease-in-out 1;
+        animation-fill-mode: forwards; }
+      .nav-list_header {
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden; }
+        .nav-list_header .nav-list__link {
+          font-size: 18px; } }
+
+@keyframes zoomIn {
+  0% {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    bottom: 0; }
+  10% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  100% {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center; } }
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    top: 0;
+    bottom: 0; }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  90% {
+    opacity: 0; }
+  100% {
+    top: -100vh;
+    bottom: inherit;
+    display: none;
+    opacity: 0;
+    z-index: -1; } }

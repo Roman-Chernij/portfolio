@@ -1,0 +1,40 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Open+Sans|Roboto');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Prompt:400,500,600,700|Roboto:500');
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Oswald|Playball');
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800');
+
+
+$MontserratUltraLight: 'Montserrat-UltraLight';
+$MontserratUltraLightDir: 'Montserrat-UltraLight';
+$urlFont: '../fonts';
+
+
+@mixin fontFace($font-name, $directory , $fontWeight: normal, $fontStyle: normal) {
+  @font-face {
+    font-family: "#{$font-name}";
+    src: url("#{$urlFont}/#{$directory}/#{$font-name}.woff") format("woff"),
+    url("#{$urlFont}/#{$directory}/#{$font-name}.woff2") format("woff2"),
+    url("#{$urlFont}/#{$directory}/#{$font-name}.ttf") format("truetype");
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+  }
+}
+
+
+@include fontFace($MontserratUltraLight, $MontserratUltraLightDir);
+
+
+//font-family: 'Lato', sans-serif;
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Roboto', sans-serif;
+
+//font-family: 'Prompt', sans-serif;
+//font-family: 'Montserrat', sans-serif;
+
+//font-family: 'Playball', cursive;
+//font-family: 'Oswald', sans-serif;

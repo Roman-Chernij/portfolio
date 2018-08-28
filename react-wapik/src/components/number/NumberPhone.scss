@@ -1,0 +1,32 @@
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  padding-left: 23px;
+
+  &__link {
+    font: 13px/1.4 $castomFont2;
+    color: $colorTheme2;
+    position: relative;
+    padding-left: 24px;
+
+    &::before {
+      font-size: 16px;
+      position: absolute;
+      top:50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  @include breakpoint ($tabletM) {
+
+    padding-left: 10px;
+
+    &__link {
+      font-size: 12PX;
+    }
+  }
+}

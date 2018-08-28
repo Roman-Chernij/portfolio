@@ -1,0 +1,179 @@
+.domain {
+  padding: 81px 0 91px;
+
+  &-wrap {
+    max-width: 890px;
+    width: 100%;
+    margin: 28px auto 0;
+  }
+
+  h2 {
+    font:900 24px/1.5 'Lato', sans-serif;
+    text-align: center;
+    color: $black;
+    margin-bottom: 17px;
+  }
+
+  p {
+    color: $light-gray;
+    text-align: center;
+    font-family: $MontserratUltraLight, sans-serif;
+    font-weight: 400;
+  }
+
+  &-form {
+    position: relative;
+
+    &__name {
+      color: $dark-gray;
+
+      &::-webkit-input-placeholder {
+        color: $dark-gray;
+      }
+
+      &::-moz-placeholder          {
+        color: $dark-gray;
+      }
+
+      &:-moz-placeholder           {
+        color: $dark-gray;
+      }
+
+      &:-ms-input-placeholder      {
+        color: $dark-gray;
+      }
+
+    }
+
+    &__value {
+      position: absolute;
+      top: 50%;
+      right: 18px;
+      padding: 5px 0 5px 10px;
+      background-position: right center;
+      height: inherit;
+      width: 4rem;
+      color: #cbcbcb;
+      transform: translateY(-50%);
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      margin: 0;
+      background-image: url(../img/domain-arrow.png);
+      
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        box-shadow: none;
+        border: none;
+        outline: none;
+        border-left: 1px solid #dfdfdf;
+      }
+
+      option {
+        border: none;
+        outline: none;
+      }
+    }
+
+    &__web {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      padding: 5px 17px;
+      display: block;
+      transform: translateY(-50%);
+      font: 16px/1.5 'Lato','Open Sans', sans-serif;
+      color: #cbcbcb;
+      border-right: 1px solid $medium-gray;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+  }
+
+  &-price-list {
+    padding: 16px 26px;
+    border: 1px solid #d9d9d9;
+
+    &-row {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      font:14px/1.5 'Lato','Open Sans', sans-serif;
+      color: #cbcbcb;
+      // min-height: 78px;
+
+      &:last-child {
+
+        .domain-price-list__item {
+
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &__item {
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // padding: 15px 15px 21px;
+      padding: 26px 15px 31px;
+      position: relative;
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #cbcbcb;
+      }
+
+      &::before {
+        bottom: 0;
+        left: 50%;
+        width: 90%;
+        height: 1px;
+        transform: translateX(-50%);
+      }
+
+      &:not(:last-child) {
+
+        &::after {
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 1px;
+          height: 90%;
+        }
+      }
+    }
+
+    &__capitalize {
+      text-transform: capitalize;
+    }
+
+    &__uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  @include breakpoint(small down) {
+
+    &-price-list {
+      padding: 16px 5px;
+      min-width: 610px;
+      width: 100%;
+    }
+
+    &-price-wrap {
+      overflow-x: auto;
+    }
+  }
+}

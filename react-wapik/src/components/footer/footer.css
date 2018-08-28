@@ -1,0 +1,60 @@
+.footer {
+  padding-top: 100px; }
+  .footer-logo {
+    font: bold 22px/1 "Shrikhand", cursive;
+    color: #0f5f5c;
+    text-transform: uppercase; }
+  .footer-email {
+    color: #0f5f5c;
+    font-size: 17px;
+    font-weight: 700; }
+  .footer-number {
+    color: #83a7a5;
+    font-size: 16px; }
+    .footer-number:hover {
+      color: #0f5f5c; }
+  .footer-address {
+    color: #83a7a5;
+    font-size: 16px; }
+    .footer-address:hover {
+      color: #0f5f5c; }
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding-bottom: 55px; }
+  .footer-col {
+    width: 25%;
+    padding: 0 15px; }
+  .footer-info__item:not(:last-child) {
+    margin-bottom: 10px; }
+  .footer-info__link {
+    line-height: 1.4; }
+  .footer-info span {
+    color: #83a7a5;
+    font-size: 16px;
+    padding-right: 10px; }
+  @media (max-width: 992px) {
+    .footer-nav {
+      display: none; }
+    .footer-col {
+      width: 33.33%; } }
+  @media (max-width: 767px) {
+    .footer {
+      padding-top: 30px; }
+      .footer-top {
+        flex-direction: column;
+        margin: 0;
+        padding-bottom: 20px; }
+      .footer-col {
+        width: 100%;
+        padding: 0; }
+        .footer-col:not(last-child) {
+          padding-bottom: 20px; }
+      .footer-info__item {
+        display: flex;
+        justify-content: center; }
+      .footer-sub-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center; } }

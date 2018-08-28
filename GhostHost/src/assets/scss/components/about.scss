@@ -1,0 +1,102 @@
+.about {
+  padding: 92px 0 87px;
+
+  &-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &-inner {
+    padding-right: 70px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 2px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-image: url(../img/decor-line2.png);
+      display: block;
+    }
+  }
+
+  &__title {
+    font: 35px/1.5 'Lato', sans-serif;
+    text-transform: capitalize;
+    margin-bottom: 17px;
+
+    strong {
+      font-weight: 900;
+    }
+  }
+
+  p {
+    font:300 18px/1.5 'Lato', sans-serif;
+    color: #747474;
+  }
+
+  &-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px 0;
+
+    &__image {
+      width: 90px;
+      height: 90px;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border:5px solid #e5e5e5;
+    }
+
+    &__title {
+      font:700 17px/1.5 'Lato', sans-serif;
+      color: lighten(#000, 19%);
+      margin-bottom: 0;
+    }
+
+    &__post {
+      font:400 15px/1.5 'Lato', sans-serif;
+      color: $light-gray2;
+      margin-bottom: 5px;
+    }
+
+    &-social {
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+
+      &__item {
+        padding: 0 10px;
+      }
+
+      &__link {
+        color: lighten(#000, 75%);
+        transition: ease-in-out color .3s;
+
+        &:hover {
+          color: #1f89ba;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+
+    &-inner {
+      padding-right: 0;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

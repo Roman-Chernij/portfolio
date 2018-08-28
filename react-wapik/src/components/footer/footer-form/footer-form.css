@@ -1,0 +1,42 @@
+.footer-form__description {
+  color: #83a7a5;
+  font: normal 16px/1.4 "Roboto", "Open Sans", "Raleway", sans-serif; }
+
+.footer-form-holder {
+  position: relative;
+  width: 100%; }
+  .footer-form-holder__input {
+    border: none;
+    outline: none;
+    color: #83a7a5;
+    background-color: #eef1ec;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 35px 10px 15px; }
+    .footer-form-holder__input.placeholder {
+      color: #83a7a5; }
+    .footer-form-holder__input:-moz-placeholder {
+      color: #83a7a5; }
+    .footer-form-holder__input::-moz-placeholder {
+      color: #83a7a5; }
+    .footer-form-holder__input:-ms-input-placeholder {
+      color: #83a7a5; }
+    .footer-form-holder__input::-webkit-input-placeholder {
+      color: #83a7a5; }
+  .footer-form-holder__btn {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    transform: translateY(-50%);
+    color: #6fb048;
+    font-size: 20px; }
+    .footer-form-holder__btn:hover, .footer-form-holder__btn:active, .footer-form-holder__btn:focus {
+      outline: none; }
+
+@media (max-width: 767px) {
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }

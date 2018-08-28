@@ -1,0 +1,49 @@
+@import "../variables.scss";
+@import "../basis/_mixins.scss";
+
+.title {
+  font:normal 15px/1.3 $basis-font-family;
+  text-align: center;
+  max-width: 580px;
+  width: 100%;
+  margin: 0 auto;
+  color: $colorTheme2;
+
+  &__head {
+    font:300 32px/1.3 $basis-font-family;
+    color: $colorTheme3;
+    padding-bottom: 21px;
+    margin-bottom: 25px;
+    position: relative;
+    display: block;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 65px;
+      height: 1px;
+      background-color: $colorTheme4;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+    }
+  }
+
+
+  @media (min-width: 320px) and (max-width: 992px) {
+
+    &__head {
+      font-size: calc(0.01636 * 100vw + 18.762px);
+    }
+  }
+
+  @include breakpoint ($mobile) {
+
+    &__head {
+      padding-bottom: 15px;
+      margin-bottom: 10px;
+    }
+  }
+}

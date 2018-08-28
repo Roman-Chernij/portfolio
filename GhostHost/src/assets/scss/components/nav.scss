@@ -1,0 +1,55 @@
+.nav {
+
+  &-list {
+    //margin-right: -2.3rem;
+
+    &__item {
+      padding:0.7rem 2.12rem 0;
+
+      a {
+        padding: 0 0  2.8rem;
+      }
+
+      &:last-child {
+          padding-right: 0;
+      }
+    }
+
+    &__link {
+      font-family: 'Lato', sans-serif;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        bottom: 0;
+        position: absolute;
+        height: 1px;
+        background-color: #fff;
+        transition: ease-in-out width .3s;
+      }
+
+      &:hover {
+
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(medium down) {
+
+    &-list {
+
+      &__item {
+        padding: 0.7rem 0.7rem 0;
+      }
+    }
+  }
+
+  @include breakpoint(small down) {
+    display: none;
+  }
+}

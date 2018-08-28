@@ -1,0 +1,62 @@
+.template {
+  background-color: #eef1ec;
+  padding: 67px 0 0; }
+  .template-wrap {
+    display: flex;
+    padding-top: 4px; }
+    .template-wrap-col {
+      display: flex; }
+  .template__image {
+    min-width: 425px;
+    display: flex;
+    align-items: flex-end; }
+    .template__image img {
+      width: 100%; }
+  .template-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 43px 0 96px; }
+    .template-inner__title {
+      font: 300 32px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+      color: #0f5f5c; }
+    .template-inner__description {
+      font: 500 14px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+      color: #83a7a5; }
+    .template-inner-list__item {
+      font: 500 14px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+      color: #83a7a5;
+      padding: 0 15px 0 40px;
+      position: relative;
+      margin-bottom: 18px; }
+      .template-inner-list__item::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        font-size: 25px;
+        margin: 0; }
+  @media (max-width: 1023px) {
+    .template-wrap {
+      padding-top: 10px; }
+    .template-inner {
+      padding: 0 0 0 30px; }
+    .template__image {
+      min-width: 350px; } }
+  @media (max-width: 767px) {
+    .template-wrap {
+      flex-direction: column-reverse; }
+    .template-inner {
+      padding: 0; }
+      .template-inner__title {
+        font: 300 25px/1.4 "Roboto", "Open Sans", "Raleway", sans-serif;
+        color: #0f5f5c; }
+    .template__image {
+      min-width: 250px;
+      margin: 0 auto; } }
+  @media (max-width: 480px) {
+    .template__image {
+      min-width: 100%;
+      margin: 0 auto; } }

@@ -1,0 +1,174 @@
+@import "../../variables.scss";
+@import "../../basis/_mixins.scss";
+
+.nav {
+  display: flex;
+  transition: ease-in-out height .4s;
+
+  &-list {
+
+    &_header {
+      display: flex;
+      align-items: center;
+    }
+
+    &__link {
+      font: 14px/1.5 $castomFont2;
+      text-transform: uppercase;
+      position: relative;
+      padding: 0 15px 10PX;
+      color: $colorTheme2;
+      transition: ease-in-out color #{$transitionTime}s;
+
+      &::before {
+          content: '';
+          display: block;
+          width: 0;
+          height: 1px;
+          position: absolute;
+          background-color:  $colorTheme1;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          transition: ease-in-out width  #{$transitionTime}s;
+      }
+
+      &:hover {
+
+          &::before {
+              width: 60%;
+          }
+      }
+
+      &:hover,
+      &:active {
+        color: $colorTheme3;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        text-decoration: none;
+      }
+
+      &_active {
+          font-weight: 900;
+
+          &::before {
+              width: 60%;
+          }
+      }
+    }
+  }
+
+  @include breakpoint ($tabletM) {
+
+    &-list {
+
+      &__link {
+        font-size: 12PX;
+        padding: 0 10PX 10px;
+      }
+    }
+  }
+  @include breakpoint ($mobile) {
+
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    background-color: $colorTheme3;
+    z-index: 1;
+    min-height: 100vh;
+
+    &-list {
+
+        &__item {
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &.nav-mobi {
+
+      &_is-opened {
+        animation: zoomIn 0.5s ease-in-out 1;
+        animation-fill-mode: forwards;
+
+      }
+
+      &_close {
+        animation: zoomOut 0.9s ease-in-out 1;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    &-list {
+
+      &_header {
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+
+        .nav-list__link {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    display: none;
+    opacity: 0;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+  }
+  10%{
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  100% {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    opacity: 1;
+    top: 0;
+    bottom: 0;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    top: -100vh;
+    bottom: inherit;
+    display: none;
+    opacity: 0;
+    z-index: -1;
+  }
+}

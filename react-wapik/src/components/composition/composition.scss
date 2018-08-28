@@ -1,0 +1,55 @@
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+.composition {
+
+  padding: 73px 0 35px;
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    padding-top: 5px;
+
+    &__item {
+      font-size: 14px;
+      color: $colorTheme2;
+      padding: 0 15px 0 57px;
+      width: 33.33%;
+      position: relative;
+      margin-bottom: 18px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 17px;
+        transform: translateY(-50%);
+        font-size: 25px;
+      }
+    }
+  }
+
+  @include breakpoint ($mobile) {
+
+    padding: 30px 0 20px;
+
+    &-list {
+
+      &__item {
+        width: 50%;
+      }
+    }
+  }
+
+  @include breakpoint ($mobileM) {
+
+    &-list {
+      margin: 0;
+
+      &__item {
+        width: 100%;
+      }
+    }
+  }
+}
+

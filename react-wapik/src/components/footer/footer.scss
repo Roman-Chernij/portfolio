@@ -1,0 +1,112 @@
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+.footer {
+  padding-top: 100px;
+
+  &-logo {
+    font: bold 22px/1 $castomFont1;
+    color: $colorTheme3;
+    text-transform: uppercase;
+  }
+
+  &-email {
+    color: $colorTheme3;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  &-number {
+    color: $colorTheme2;
+    font-size: 16px;
+
+    &:hover {
+      color: $colorTheme3;
+    }
+  }
+
+  &-address {
+    color: $colorTheme2;
+    font-size: 16px;
+
+    &:hover {
+      color: $colorTheme3;
+    }
+  }
+
+  &-top {
+    display: flex;
+    flex-wrap: wrap;
+    margin:0 -15px;
+    padding-bottom: 55px;
+  }
+
+  &-col {
+    width: 25%;
+    padding: 0 15px;
+  }
+
+  &-info {
+
+    &__item {
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__link {
+      line-height: 1.4;
+    }
+
+    span {
+      color: $colorTheme2;
+      font-size: 16px;
+      padding-right: 10px;
+    }
+  }
+
+  @include breakpoint ($tabletM) {
+
+    &-nav {
+      display: none;
+    }
+
+    &-col {
+      width: 33.33%;
+    }
+  }
+
+  @include breakpoint ($mobile) {
+    padding-top: 30px;
+
+    &-top {
+      flex-direction: column;
+      margin: 0;
+      padding-bottom: 20px;
+    }
+
+    &-col {
+      width: 100%;
+      padding: 0;
+
+      &:not(last-child) {
+        padding-bottom: 20px;
+      }
+    }
+
+    &-info {
+
+      &__item {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &-sub-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

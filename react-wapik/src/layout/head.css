@@ -1,0 +1,99 @@
+.head {
+  padding: 110px 0 60px;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex; }
+  .head-home {
+    box-shadow: 0 75px 42px 11px #b2b2b3 inset;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .head-home::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(45, 110, 112, 0.9); }
+  .head-about {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%; }
+    .head-about::before {
+      content: '';
+      background-color: rgba(45, 110, 112, 0.7);
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0; }
+    .head-about .haed-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+  .head-pricing {
+    background-color: #eef1ec; }
+  .head-contact {
+    min-height: inherit; }
+  .head-container {
+    display: flex;
+    align-items: center;
+    z-index: 2; }
+  .head-wrap {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto; }
+  .head__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%; }
+  .head__title {
+    font: 38px/1.4 "Roboto", "Open Sans", "Raleway", sans-serif;
+    margin-bottom: 20px; }
+    .head__title_pricing {
+      color: #0f5f5c; }
+    .head__title_default {
+      color: #fff; }
+  .head__description {
+    font: 16px/1.4 "Roboto", "Open Sans", "Raleway", sans-serif;
+    color: #fff;
+    width: 50%;
+    margin-bottom: 15px; }
+    .head__description_pricing {
+      color: #83a7a5; }
+  .head-btn__link {
+    display: inline-block;
+    font: 14px/1.4 "Montserrat", sans-serif;
+    color: #fff;
+    padding: 15px 45px;
+    text-transform: uppercase;
+    background-color: #6fb048;
+    border-radius: 5px; }
+    .head-btn__link:hover {
+      background-color: #8ac269; }
+  @media (max-width: 1100px) and (min-width: 300px) {
+    .head__title {
+      font-size: calc(0.01625 * 100vw + 20.125px); } }
+  @media (max-width: 767px) {
+    .head {
+      padding: 90px 0 20px; } }
+  @media (max-width: 992px) {
+    .head-home .head-container {
+      justify-content: center; }
+    .head-home .haed-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    .head__description {
+      width: 100%;
+      margin-bottom: 25px; } }

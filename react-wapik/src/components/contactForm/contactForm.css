@@ -1,0 +1,96 @@
+.contact {
+  padding-bottom: 105px; }
+  .contact-wrap {
+    display: flex;
+    margin: 0 -15px;
+    padding-top: 58px; }
+    .contact-wrap__col {
+      padding: 0 15px; }
+      .contact-wrap__col-form {
+        padding: 0 45px 0 84px;
+        width: 59%; }
+  .contact-form {
+    width: 100%; }
+  .contact-holder {
+    position: relative;
+    max-width: 340px;
+    padding: 32px 105px 47px 40px; }
+    .contact-holder::before, .contact-holder::after {
+      content: '';
+      background-image: url(decor-line-godisontal.png);
+      background-repeat: repeat;
+      height: 2px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: block; }
+    .contact-holder::before {
+      top: 0; }
+    .contact-holder::after {
+      bottom: 0; }
+    .contact-holder__title {
+      text-transform: uppercase;
+      color: #0f5f5c;
+      font: 300 22px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+      margin-bottom: 15px; }
+  .contact-inner::before, .contact-inner::after {
+    content: '';
+    background-image: url(decor-line-vertical.png);
+    background-repeat: repeat;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block; }
+  .contact-inner::before {
+    left: 0; }
+  .contact-inner::after {
+    right: 0; }
+  .contact-list__item {
+    position: relative;
+    padding-left: 30px; }
+    .contact-list__item::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: #6fb048; }
+  .contact-list__address {
+    color: #83a7a5;
+    font: normal 15px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+    margin-bottom: 26px; }
+  .contact-list__link {
+    font: normal 15px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif;
+    margin-bottom: 5px;
+    display: block; }
+    .contact-list__link:hover {
+      color: #083331; }
+    .contact-list__link_tel {
+      color: #83a7a5; }
+    .contact-list__link_email {
+      color: #0f5f5c; }
+  @media (max-width: 1023px) {
+    .contact {
+      padding-bottom: 80px; }
+      .contact-wrap {
+        margin: 0 -15px;
+        padding-top: 58px; }
+        .contact-wrap__col-form {
+          padding: 0 15px;
+          flex: 1 0 auto; }
+      .contact-holder {
+        min-width: 285px;
+        padding: 32px 30px 47px; } }
+  @media (max-width: 767px) {
+    .contact {
+      padding-bottom: 30px; }
+      .contact-wrap {
+        flex-wrap: wrap;
+        flex-direction: column; }
+        .contact-wrap__col {
+          display: flex;
+          justify-content: center; }
+          .contact-wrap__col-form {
+            width: 100%; }
+      .contact-form {
+        padding-bottom: 30px; } }

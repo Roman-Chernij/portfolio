@@ -1,0 +1,7 @@
+.mobi-btn {
+  display: none;
+
+  @include breakpoint(small down) {
+    display: flex;
+  }
+}

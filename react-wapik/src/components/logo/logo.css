@@ -1,0 +1,20 @@
+.logo {
+  padding-right: 23px;
+  position: relative; }
+  .logo::before {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 1px;
+    background-color: #83a7a5;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); }
+  .logo__link {
+    font: 28px/1.4 "Shrikhand", cursive;
+    text-transform: uppercase;
+    color: #0f5f5c; }
+  @media (max-width: 480px) {
+    .logo {
+      padding-right: 10px; } }

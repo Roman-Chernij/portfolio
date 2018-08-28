@@ -1,0 +1,82 @@
+.user-panel {
+
+  &-wrap {
+    display: flex;
+  }
+
+  &-login,
+  &-register {
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    padding: 44px 0 55px;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    width: 50%;
+
+    &:hover,
+    &:focus,
+    &:active{
+      cursor: pointer;
+      outline: none;
+    }
+
+    span {
+      text-transform: uppercase;
+      color: #fff;
+      position: relative;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: block;
+      transform: skewX(-13deg);
+      transition: ease-in-out background-color .3s;
+    }
+  }
+
+  &-login {
+
+    &:after {
+      right: -1px;
+      left: -9990px;
+      background-color: $login-background;
+    }
+
+    &:hover {
+
+      &:after {
+        background-color: lighten($login-background, 8%);
+      }
+    }
+  }
+
+  &-register {
+
+    &:hover {
+
+      &:after {
+        background-color: lighten($register-background, 8%);
+      }
+    }
+
+    &:after {
+      left: -1px;
+      right: -9990px;
+      background-color: $register-background;
+    }
+  }
+
+  @include breakpoint(small down) {
+    &-login,
+    &-register {
+      padding: 20px 0;
+      font-size: 18px;
+    }
+  }
+}

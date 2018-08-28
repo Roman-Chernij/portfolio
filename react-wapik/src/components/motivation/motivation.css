@@ -1,0 +1,61 @@
+.motivation {
+  padding: 100px 0 85px;
+  position: relative; }
+  .motivation::after, .motivation::before {
+    content: '';
+    position: absolute;
+    display: block;
+    background-color: #f2f2f2;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  .motivation::after {
+    height: 91px;
+    width: 2px; }
+  .motivation::before {
+    height: 2px;
+    width: 91px; }
+  .motivation_about::after, .motivation_about::before {
+    display: none; }
+  .motivation-inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -25px;
+    padding-top: 50px; }
+  .motivation__item {
+    width: 33.33%;
+    padding: 0 25px 50px; }
+  .motivation-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: 16px/1.5 "Roboto", "Open Sans", "Raleway", sans-serif; }
+    .motivation-holder__icon {
+      color: #6fb048;
+      font-size: 60px;
+      margin-bottom: 10px; }
+    .motivation-holder__title {
+      color: #0f5f5c;
+      margin-bottom: 15px; }
+    .motivation-holder__description {
+      color: #83a7a5;
+      text-align: center;
+      font-size: 14px; }
+  @media (max-width: 1200px) {
+    .motivation-inner {
+      margin: 0 -15px;
+      padding-top: 50px; }
+    .motivation__item {
+      width: 33.33%;
+      padding: 0 15px 30px; } }
+  @media (max-width: 767px) {
+    .motivation {
+      padding: 30px 0; }
+      .motivation::after, .motivation::before {
+        display: none; }
+      .motivation__item {
+        width: 50%; } }
+  @media (max-width: 480px) {
+    .motivation__item {
+      width: 100%; } }

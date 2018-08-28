@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+.error {
+  position: relative;
+  padding-top: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-holder {
+
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font: 90px/1.5 'Archivo Black', sans-serif;
+    color: $colorTheme3;
+  }
+
+  &__description {
+    font: 40px/1.5 'Architects Daughter', cursive;;
+    color: $colorTheme4;
+    display: block;
+    text-align: center;
+  }
+}

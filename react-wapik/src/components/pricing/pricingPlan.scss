@@ -1,0 +1,157 @@
+@import '../../variables.scss';
+@import "../../basis/_mixins.scss";
+
+
+
+.pricing {
+    padding-top: 85px;
+
+    &-inner {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0 0;
+
+        p {
+          color: $colorTheme2;
+          font-size: 14px;
+
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+        }
+    }
+
+    &-wrap {
+        max-width: 763px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+
+    }
+
+    &-holder {
+        width: 33.33%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 15px;
+        border: 1px solid $colorTheme1;
+        transition: ease-in-out boder .3s;
+
+        &:not(first-child) {
+            margin-left: -1px;
+        }
+
+        &:hover {
+            position: relative;
+            z-index: 2;
+            border: 1px solid $colorTheme4;
+        }
+
+        &__type {
+            color: $colorTheme4;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        &__price {
+            color: $colorTheme3;
+            font-family: $castomFont2;
+            font-size: 65px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        &__month {
+            color: $colorTheme3;
+            font-size: 14px;
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &-list {
+            margin-bottom: 27px;
+
+            &__item {
+                color: $colorTheme2;
+                text-align: center;
+                font-size: 16px;
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        &__btn {
+            padding: 12px 27px;
+            border-radius: 5px;
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+            font:bold 13px/1.4 $castomFont2;
+            background-color: $colorTheme2;
+            transition: ease-in-out background-color .3s;
+
+            &:hover {
+                background-color: $colorTheme4;
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 992px) {
+
+        &-holder {
+
+            &__price {
+                font-size: calc(0.0446 * 100vw + 20.714px);
+            }
+        }
+    }
+
+    @include breakpoint ($mobile) {
+
+        &-inner {
+            padding: 25px 0 0;
+        }
+
+        &-holder {
+            width: 50%;
+
+            &__month {
+                font-size:11px;
+            }
+
+            &-list {
+                margin-bottom: 27px;
+
+                &__item {
+                    font-size: 14px;
+
+                    &:not(:last-child) {
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+
+            &__btn {
+                padding: 12px 15px;
+                font-size: 11px;
+            }
+        }
+    }
+
+    @include breakpoint ($mobileM) {
+        &-holder {
+            width: 100%;
+
+        }
+    }
+}
